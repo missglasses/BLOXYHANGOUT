@@ -1,32 +1,16 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 
-const Navbar = ()=> {
+export default function Navbar() {
+  return (
+    <nav className="navbar">
+      <ul className="nav-links">
+        <li><Link to="/" className="nav-link">Home</Link></li>
+        <li><Link to="/about" className="nav-link">About</Link></li>
+        <li><Link to="/contact" className="nav-link">Contact</Link></li>
+      </ul>
 
-    return (
-        <nav style={styles.nav}>
-        <a href = "#home" style={styles.link}>Home</a>
-        <a href = "#about" style={styles.link}>About</a>
-        <a href ="#contact" style={styles.link}>Contact Us</a>
-        </nav>
-
-    );
-};
-
-const styles = {
-    nav: {
-    backgroundColor: '#304F6E',
-    padding: '1rem 2rem',
-    display: 'flex',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    },
-
-    link :{
-    color: 'white',
-    textDecoration: 'none',
-    fontWeight: 'bold',
-    },
+      <div className="brand">BloxyHangout</div>
+    </nav>
+  );
 }
-
-
-export default Navbar;

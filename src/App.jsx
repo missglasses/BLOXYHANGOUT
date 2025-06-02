@@ -1,43 +1,23 @@
-import { useState } from 'react'
-import './App.css'
-import Navbar from './components/Navbar'
-import { Carousel } from 'react-responsive-carousel'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import './App.css';
 
 function App() {
   return (
     <>
       <Navbar />
-      <main style={{ padding: '2rem' }}></main>
-
-      <div className='center-container'>
-        <div className='card'>
-          <div className='carousel-wrapper'>
-            <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false}>
-              <div><img src='/tambay.png' alt="Tambay" /></div>
-              <div><img src="/religious.png" alt="Religious" /></div>
-              <div><img src="/balintong.png" alt="Balintong" /></div>
-              <div><img src="/halloween.png" alt="Halloween" /></div>
-              <div><img src="/kwismas-cuties.png" alt="Kwismas Cuties" /></div>
-              <div><img src="/nav-pool.png" alt="Nav Pool" /></div>
-              <div><img src="/heroes.png" alt="Heroes" /></div>
-              <div><img src="/barbielou.png" alt="Barbielou" /></div>
-              <div><img src="/feud.png" alt="Feud" /></div>
-              <div><img src="/btsarmy.png" alt="BTS Army" /></div>
-              <div><img src="/virus-variation.png" alt="Virus Variation" /></div>
-            </Carousel>
-          </div>
-
-          <h3>Sign in to <b>BloxyHangout</b></h3>
-          <form>
-            <input type="text" placeholder='Username' required /><br /><br />
-            <input type='password' placeholder='Password' required /><br /><br />
-            <button type='submit'>Login</button>
-          </form>
-        </div>
-      </div>
+      {/* <main style={{ padding: '2rem' }}> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      {/* </main> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
