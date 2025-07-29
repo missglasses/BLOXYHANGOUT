@@ -43,18 +43,31 @@ html, body {
   padding: 0;
 }
 
-body {
+/*body {
   background-image: url('/gradplot.jpg');
-  background-size: cover;          /* cover entire viewport */
-  background-position: center;    /* center the image */
-  background-repeat: no-repeat;   /* don't tile */
-  background-attachment: fixed;   /* keep fixed when scrolling */
-  min-height: 100vh;              /* full viewport height */
+  background-size: cover;          /* cover entire viewport 
+  background-position: center;    /* center the image 
+  background-repeat: no-repeat;   /* don't tile 
+  background-attachment: fixed;   /* keep fixed when scrolling 
+  min-height: 100vh;              /* full viewport height 
   margin: 0;
   padding: 0;
-  width: 100vw;                   /* full viewport width */
-  height: 100vh;                  /* full viewport height */
+  width: 100vw;                   /* full viewport width 
+  height: 100vh;                  /* full viewport height 
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/gradplot.jpg');
+  background-size: cover;         /* Fill the screen */
+  background-position: center;    /* Center the image */
+  background-repeat: no-repeat;   /* No tiling */
+  background-attachment: fixed;   /* Stay in place on scroll */
 }
+
 
 
 
