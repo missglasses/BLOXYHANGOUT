@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: transparent;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -62,10 +62,22 @@ body {
   width: 100vw;
   height: 100vh;
   background-image: url('/gradplot.jpg');
-  background-size: cover;         /* Fill the screen */
+  background-size: 150% auto;    /* Make image larger for visible marquee movement */
   background-position: center;    /* Center the image */
   background-repeat: no-repeat;   /* No tiling */
   background-attachment: fixed;   /* Stay in place on scroll */
+  animation: marquee-right 15s linear infinite;
+  min-height: 100vh;             /* Ensure full height coverage */
+  background-color: transparent;  /* Remove any default background */
+}
+
+@keyframes marquee-right {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 100% center;
+  }
 }
 
 
